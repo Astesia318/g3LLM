@@ -57,6 +57,7 @@ xtuner_finetune/
 ### 1. 环境准备
 
 确保已安装以下依赖：
+
 - Python 3.10+
 - PyTorch 2.9.0+ (CUDA 12.8)
 - XTuner
@@ -88,6 +89,7 @@ python convert_to_multiturn.py
 ```
 
 该脚本会：
+
 - 自动扫描 `sampled_data/` 文件夹中的所有 JSON 文件
 - 处理 `data.jsonl` 和 `self_awareness_data.jsonl` 文件
 - 将所有数据合并并转换为统一的多轮对话格式
@@ -98,6 +100,7 @@ python convert_to_multiturn.py
 #### 3.1 配置检查
 
 编辑 `xtuner/llama3_8b_instruct_qlora_alpaca_e3_M.py` 确认：
+
 - `data_path`: 指向 `multiturn_data_merged.json`
 - `pretrained_model_name_or_path`: 指向基础模型路径
 - 训练超参数（学习率、批次大小等）
@@ -111,6 +114,7 @@ python convert_to_multiturn.py
 ```
 
 该脚本会依次执行：
+
 1. **训练模型**：使用 QLoRA 进行微调
 2. **转换格式**：将 PyTorch 检查点转换为 HuggingFace 格式
 3. **合并模型**：将 LoRA 适配器合并到基础模型
@@ -209,6 +213,7 @@ python vllm_web.py
 ### 3. 模型输出重复
 
 在推理时调整生成参数：
+
 - `repetition_penalty=1.15`
 - `presence_penalty=0.1`
 - `temperature=0.7`
@@ -254,6 +259,16 @@ python vllm_web.py
 - ✅ Gradio Web 界面
 - ✅ 专业心理健康领域微调
 
+## 🐼 结果示例
+
+![image-20251123153852229](./assets/image-20251123153852229.png)
+
+可以发现该机器人具有清晰的自我认知，明白自己的任务。
+
+![image-20251123154134457](./assets/image-20251123154134457.png)
+
+目前我们项目的一个小缺陷在于大模型会更偏向于用英文回答，甚至会在中文句段中参入一些英文词汇，我们认为是目前数据量过少导致的。
+
 ## 📄 许可证
 
 本项目基于 Llama3 模型，请遵循 Meta 的许可证要求。
@@ -265,5 +280,3 @@ Group3 团队
 ---
 
 **注意**: 本助手仅提供心理咨询建议，不能替代专业心理医生的诊断和治疗。如遇紧急情况，请及时寻求专业医疗帮助。
-
-

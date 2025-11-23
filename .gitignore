@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 模型文件（太大，不应上传）
+model_cache/
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.h5
+*.onnx
+
+# 训练输出
+work_dirs/
+*.log
+*.jsonl.bak
+
+# 合并后的模型（太大）
+merged_Llama3_8b_instruct/
+hf_llama3/
+
+# 数据集（如果太大可以不上传，或使用 Git LFS）
+# dataset/*.json
+# dataset/*.jsonl
+# dataset/sampled_data/
+
+# 生成的数据（可选，根据需求决定）
+# gen_data/sampled_data/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# 环境变量
+.env
+.env.local
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+tmp/
+temp/
+*.cache
+
+# 其他
+*.orig
+.pytest_cache/
+.coverage
+htmlcov/
+

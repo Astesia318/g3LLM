@@ -1,0 +1,46 @@
+# g3LLM 项目依赖包
+# 注意：本项目主要使用 conda 环境，以下为通过 pip 安装的核心包
+
+# 深度学习框架
+torch>=2.0.0
+transformers>=4.30.0
+peft>=0.5.0
+
+# XTuner 相关（如果通过 pip 安装）
+# xtuner 可能需要从源码安装，请参考官方文档
+
+# 量化支持
+bitsandbytes>=0.41.0
+triton>=2.0.0
+
+# 数据处理
+datasets>=2.14.0
+numpy>=1.24.0
+
+# MMEngine (XTuner 依赖)
+mmengine>=0.9.0
+mmcv>=2.0.0
+
+# 推理服务
+vllm>=0.2.0
+openai>=1.0.0
+
+# Web 界面
+gradio>=4.0.0
+
+# 其他工具
+tqdm>=4.65.0
+accelerate>=0.20.0
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+
+# 数据生成相关（可选）
+# autogen-agentchat  # 如果使用数据生成功能
+
+# 注意：
+# 1. PyTorch 建议通过 conda 安装以获得更好的 CUDA 支持
+# 2. bitsandbytes 和 triton 需要与 CUDA 版本匹配
+# 3. 某些包可能需要从特定源安装，如：
+#    pip install bitsandbytes==0.45.0.post2 --extra-index-url https://download.pytorch.org/whl/cu128
+#    pip install triton==3.0.0 --extra-index-url https://download.pytorch.org/whl/cu128
+

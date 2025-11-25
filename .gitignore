@@ -40,7 +40,7 @@ work_dirs/
 # 合并后的模型（太大）
 merged_Llama3_8b_instruct/
 hf_llama3/
-
+g3LLM/
 # 数据集（如果太大可以不上传，或使用 Git LFS）
 # dataset/*.json
 # dataset/*.jsonl

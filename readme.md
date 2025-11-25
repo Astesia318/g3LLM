@@ -200,6 +200,26 @@ python vllm_web.py
 - **ROUGE-1/2/L**：评估生成文本覆盖参考文本信息的程度。
 - 所有指标的具体实现由 `compute_metrics` 提供，如需扩展可在该文件中添加。
 
+#### 5.4 最新评估结果
+
+基于 `evaluate/data_dir/converted.json`（1596 条样本）运行上述命令得到如下指标：
+
+```json
+{
+  "rouge-1": 20.8451,
+  "rouge-2": 4.9740,
+  "rouge-l": 10.6202,
+  "bleu": {
+    "bleu_1": 21.1908,
+    "bleu_2": 8.9493,
+    "bleu_3": 3.7568,
+    "bleu_4": 1.6075
+  }
+}
+```
+
+（环境：`CUDA_VISIBLE_DEVICES=3 python evaluate/vllm_eval.py --dataset evaluate/data_dir/converted.json --split "train[:1596]" --model-name ./merged_Llama3_8b_instruct`）
+
 ## 📊 训练配置说明
 
 ### 关键超参数

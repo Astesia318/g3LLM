@@ -29,7 +29,7 @@ pretrained_model_name_or_path = '/root/zzgroup3/xtuner_finetune/model_cache/Llam
 use_varlen_attn = False  # new
 
 # Data
-data_path = '/root/zzgroup3/xtuner_finetune/dataset/multiturn_data_merged.json'
+data_path = '/root/zzgroup3/xtuner_finetune/dataset/multiturn_data_merged_plus_emollm.json'
 # data_path = '/root/zzgroup3/xtuner_finetune/dataset/emollm.json'
 
 prompt_template = PROMPT_TEMPLATE.llama3_chat

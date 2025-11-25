@@ -6,7 +6,7 @@
 # 方法1: 降低 GPU 内存利用率（推荐）
 # 将利用率从默认的 0.9 降低到 0.7 或 0.8
 CUDA_VISIBLE_DEVICES=2 vllm serve ./merged_Llama3_8b_instruct \
-    --gpu-memory-utilization 0.7 \
+    --gpu-memory-utilization 0.4 \
     --max-model-len 8192 \
     --port 8000
 

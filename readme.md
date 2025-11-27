@@ -321,7 +321,7 @@ python vllm_web.py
 
 ![image1](./assets/image1.png)
 
-在遇到意外的输入时模型可以正常的进行回复。
+在遇到意外的输入时模型可以正常检测出，并且做出纠正。
 
 ![image2](./assets/image2.png)
 
@@ -344,6 +344,15 @@ python vllm_web.py
 ```
 
 使用评估数据集中的示例数据进行测试，g3LLM产生的输出更多更全面，数据集中给出的期望输出也一并给出。
+
+![image3](./assets/image3.png)
+
+涉及到紧急情况的输入时，g3LLM也相应地进行了疏导，并且避免刺激到用户做出过激的举动。
+
+![image4](./assets/image4.png)
+![image5](./assets/image5.png)
+
+与g3LLM进行多轮对话测试，大模型会逐步引导，并且积极给出相应的措施加以应对。
 
 ## 📄 许可证
 
